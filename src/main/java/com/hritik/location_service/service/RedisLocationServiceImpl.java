@@ -48,8 +48,8 @@ public class RedisLocationServiceImpl implements LocationService {
             Point point = geoOps.position(DRIVER_GEO_OPS_KEY, result.getContent().getName()).get(0);
             DriverLocationDto driverLocation = DriverLocationDto.builder()
                     .driverId(result.getContent().getName())
-                    .latitude(point.getX())
-                    .longitude(point.getY())
+                    .longitude(point.getX())
+                    .latitude(point.getY())
                     .build();
             drivers.add(driverLocation);
         }
