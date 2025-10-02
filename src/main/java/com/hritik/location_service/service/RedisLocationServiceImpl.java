@@ -32,8 +32,8 @@ public class RedisLocationServiceImpl implements LocationService{
                 new RedisGeoCommands.GeoLocation<>(
                         driverId,
                         new Point(
-                                latitude,
-                                longitude)));
+                                longitude,
+                                latitude)));
         return true;
     }
 
