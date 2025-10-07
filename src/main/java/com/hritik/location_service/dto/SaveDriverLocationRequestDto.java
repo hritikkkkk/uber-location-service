@@ -18,8 +18,8 @@ import lombok.*;
 public class SaveDriverLocationRequestDto {
 
     @NotBlank(message = "Driver ID is required")
-    @Size(min = 3, max = 50, message = "Driver ID must be between 3 and 50 characters")
-    @Schema(description = "Unique driver identifier", example = "DRV-12345", required = true)
+//    @Size(min = 3, max = 50, message = "Driver ID must be between 3 and 50 characters")
+    @Schema(description = "Unique driver identifier", required = true)
     @JsonProperty("driver_id")
     private String driverId;
 

@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: location-service
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+  doc:
+    api-docs:
+      path: /v3/api-docs
+    swagger-ui:
+      path: /swagger-ui.html
+      enabled: true
+    show-actuator: true
+    packages-to-scan: com.hritik.location_service.controller
+
+server:
+  port: 7777
+
+location:
+  required-driver-count: 3
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
